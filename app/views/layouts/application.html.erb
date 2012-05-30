@@ -7,19 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h1>EmClicks</h1>
-	<% if @current_user %>
-		<%= link_to 'Profile', user_url(@current_user.id) %> |
-		<%= link_to 'Sign Out', sign_out_url %>
-	<% else %>
-		<%= link_to 'Sign In', sign_in_url %>
-	<% end %>
+	<header>
+		<h1>EmClicks</h1>
+		<% if @current_user %>
+			<%= link_to 'Profile', user_url(@current_user.id) %> |
+			<%= link_to 'Sign Out', sign_out_url %>
+		<% else %>
+			<%= link_to 'Sign In', sign_in_url %>
+		<% end %>
+	</header>
+	<div class='content'>
+		<% if flash[:notice] %>
+			<p class='notice'><%= flash[:notice] %></p>
+		<% end %>
 	
-	<% if flash[:notice] %>
-		<p class='notice'><%= flash[:notice] %></p>
-	<% end %>
-	
-	<%= yield %>
-
+		<%= yield %>
+	</div>
 </body>
 </html>
