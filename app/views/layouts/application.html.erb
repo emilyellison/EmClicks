@@ -7,21 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header>
-		<h1>EmClicks</h1>
-		<% if @current_user %>
-			<%= link_to 'Profile', user_url(@current_user.id) %> |
-			<%= link_to 'Sign Out', sign_out_url %>
-		<% else %>
-			<%= link_to 'Sign In', sign_in_url %>
-		<% end %>
-	</header>
-	<div class='content'>
-		<% if flash[:notice] %>
-			<p class='notice'><%= flash[:notice] %></p>
-		<% end %>
+	<div class='container'>
+		<header>
+			<h1><%= link_to 'EmClicks', root_url %></h1>
+			<ul>
+				<% if @current_user %>
+					<li><%= link_to 'Profile', user_url(@current_user.id) %></li>
+					<li><%= link_to 'Sign Out', sign_out_url %></li>
+				<% else %>
+					<li><%= link_to 'Sign In', sign_in_url %></li>
+				<% end %>
+			</ul>
+		</header>
+		<nav>
+			<ul>
+				<li><%= link_to 'Portfolio', '#' %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'About', '#' %></li>
+			</ul>
+		</nav>
+		<div class='content'>
+			<% if flash[:notice] %>
+				<p class='notice'><%= flash[:notice] %></p>
+			<% end %>
 	
-		<%= yield %>
+			<%= yield %>
+		</div>
+		<footer>
+			<p>&copy; 2012 EmClicks</p>
+			<p>Web Development & Design by <%= link_to 'Emily Ellison', '#' %>.</p>
+		</footer>
 	</div>
 </body>
 </html>

@@ -1,92 +1,130 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+$black:#3B2E2A;
+$purple:#3F0632;
+$gold:#A47F1A;
+$darkgold:#895F00;
+$beige:#F6E6CE;
+$lightpink:#FEF1E0;
+$olive:#8B7325;
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*Emily Ellison*/
+$lightblue:#8aaeae;
+$greyblue:#497cbe;
+$blue:#016a8E;
+$darkgreen:#75821b;
+$green:#99a923;
+$lightgreen:#ccba27;
 
 body {
-	font-family:futura;
-	a {
-		text-decoration:none;
-	}
-	p {
-		padding:10px 0px;
-	}
-	header {
-		padding:10px 250px;
-		background-image: -webkit-linear-gradient(top, purple, darkmagenta);
-		h1 {
-			color:white;
-			font-size:30px;
-			padding:10px 0px;
+	background:$blue;
+	.container {
+		font-family:futura;
+		margin:20px auto;
+		width:950px;
+		background:aliceblue;
+		border:1px solid darkslategrey;
+		border-radius:8px;
+		box-shadow:2px 3px 3px rgba(0, 0, 0, 0.25);
+		header {
+			height:35px;
+			padding:20px 20px;
+			h1 {
+				font-weight:bold;
+				float:left;
+				font-size:35px;
+				a {
+					text-decoration:none;
+					color:$blue;			
+				}
+				a:hover {
+					color:purple;
+				}
+			}
+			ul {
+				float:right;
+				li {
+					float:left;
+					a {
+						margin-left:20px;
+						font-size:20px;
+						text-decoration:none;
+						color:$blue;
+					}
+					a:hover {
+						color:purple;
+					}
+				}
+			}
 		}
-		a {
-			color:white;
+		nav {
+			height:20px;
+			padding:20px 20px;
+			border-top:1px solid $darkgreen;
+			border-bottom:1px solid $darkgreen;
+			background:-webkit-linear-gradient(top, $lightgreen, $green);
+			li {
+				float:left;
+				margin-right:20px;
+				a {
+					font-size:20px;
+					text-shadow:$darkgreen 2px 2px;
+					color:white;
+					text-decoration:none;
+				}
+			}
 		}
-	}
-	.content {
-		padding:10px 250px;
-		h2 {
-			padding:20px 0px;
-			font-size:25px;
+		.content {
+			.notice {
+				color:purple;
+			}
+			h2 {
+				padding:30px 20px 10px;
+				font-size:20px;
+			}
+			p {
+				padding:20px 20px;
+				font-size:20px;
+				a {
+					text-decoration:none;
+					color:$blue;
+				}
+				a:hover {
+					color:purple;
+				}
+			}
+			form {
+				padding:20px 20px;
+				input {
+					border:1px solid $blue;
+					border-radius:4px;
+				}
+				input, label {
+					font-family:futura;
+					padding:3px 2px;
+					display:block;
+					font-size:18px;
+				}
+				.button {
+					border-radius:8px;
+					border:1px solid $darkgreen;
+					background:-webkit-linear-gradient(top, $lightgreen, $green);
+					color:white;
+					text-shadow:$darkgreen 2px 2px;
+					padding:5px 10px;
+				}
+			}
 		}
-		a {
-			color:dodgerblue;
-		}
-		.notice {
-			color:darkorange;
-		}
-		form {
-			input, label {
-				padding:5px 2px;
-				display:block;
-				font-size:15px;
-				font-family:futura;
+		footer {
+			border-top:1px solid $blue;
+			padding:20px 20px;
+			p {
+				margin:5px 0px;
+				color:$lightblue;
+				a {
+					color:$blue;
+					text-decoration:none;
+				}
+				a:hover {
+					color:purple;
+				}
 			}
 		}
 	}
