@@ -21,6 +21,8 @@ $background_light:$lightblue;
 $background_dark:$blue;
 $container_background:aliceblue;
 $container_border:darkslategrey;
+$header_link:$blue;
+$header_hover:purple;
 
 body {
 	background:-webkit-radial-gradient($background_light,$background_dark);
@@ -41,10 +43,10 @@ body {
 				font-size:35px;
 				a {
 					text-decoration:none;
-					color:$blue;			
+					color:$header_link;			
 				}
 				a:hover {
-					color:purple;
+					color:$header_hover;
 				}
 			}
 			ul {
