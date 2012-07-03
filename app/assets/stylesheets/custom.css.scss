@@ -19,6 +19,8 @@ $navbar_dark:$green;
 $navbar_border:$darkgreen;
 $background_light:$lightblue;
 $background_dark:$blue;
+$container_background:aliceblue;
+$container_border:darkslategrey;
 
 body {
 	background:-webkit-radial-gradient($background_light,$background_dark);
@@ -26,8 +28,8 @@ body {
 		font-family:futura;
 		margin:20px auto;
 		width:950px;
-		background:aliceblue;
-		border:1px solid darkslategrey;
+		background:$container_background;
+		border:1px solid $container_border;
 		border-radius:8px;
 		box-shadow:3px 4px 4px rgba(0, 0, 0, 0.25);
 		header {
