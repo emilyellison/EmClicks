@@ -17,9 +17,11 @@ $lightgreen:#ccba27;
 $navbar_light:$lightgreen
 $navbar_dark:$green
 $navbar_border:$darkgreen;
+$background_light:$lightblue;
+$background_dark:$blue;
 
 body {
-	background:-webkit-radial-gradient($lightblue,$blue);
+	background:-webkit-radial-gradient($background_light,$background_dark);
 	.container {
 		font-family:futura;
 		margin:20px auto;
